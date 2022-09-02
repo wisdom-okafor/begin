@@ -10,5 +10,6 @@ func subtraction(x int, y int) int {
 }
 func main () {
 	var result = subtraction(690000,50000)
+	
 	fmt.Println(result)
 }
