@@ -8,5 +8,5 @@ func main() {
 		b := a 
 		b[1] = 5
 		fmt.Println(a)
-		fmt.Println(a)  
+		fmt.Println(b)  
 }
