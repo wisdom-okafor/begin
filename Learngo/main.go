@@ -1,11 +1,14 @@
 package main
 
 import (
-      "fmt"
-)
+	"fmt"
+)	
 func main() {
-	grade1 := 97
-	grade2 := 85
-	grade3 := 93
-	fmt.Printf("Grades: %v, %v, %v", grade1, grade2, grade3)
+	var students [3]string
+	fmt.Printf("students: %v\n", students)
+	students[0] = "Lisa"
+	students[1] = "Ahmed"
+	students[2] = "Arnold"
+	fmt.Printf("students: %v\n", students)
+  
 }
