@@ -12,4 +12,7 @@ func main() {
 		fmt.Println(a)
 		fmt.Printf("Length: %v\n", len(a))
 		fmt.Printf("capacity: %v\n", cap (a))
+		fmt.Println(a)
+		fmt.Printf("Length: %v\n", len(a))
+		fmt.Printf("capacity: %v\n", cap(a))
 }
