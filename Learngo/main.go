@@ -8,4 +8,8 @@ func main() {
 		fmt.Println(a)
 		fmt.Printf("Length: %v\n", len(a))
 		fmt.Printf("capacity: %v\n", cap(a))
+		a = append(a, 1)
+		fmt.Println(a)
+		fmt.Printf("Length: %v\n", len(a))
+		fmt.Printf("capacity: %v\n", cap (a))
 }
