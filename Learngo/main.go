@@ -4,7 +4,7 @@ import (
 	"fmt"
 )	
 func main() {
-        a := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+        a := [...]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 		b := a[:]      // slice of all elements
 		c := a[3:]     // slice from 4th element to end
 		d := a[:6]     // slicce first 6 elements
