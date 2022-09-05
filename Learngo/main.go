@@ -4,7 +4,9 @@ import (
 	"fmt"
 )	
 func main() {
-        var identityMatrix [3][3]int = [3][3]int{ [3]int{1, 0, 0}, [3]int{0, 1, 0}, [3]int{0, 0, 1}	}
-		fmt.Println(identityMatrix)
-  
+        a := [...]int{1, 2, 3}
+		b := a 
+		b[1] = 5
+		fmt.Println(a)
+		fmt.Println(a)  
 }
