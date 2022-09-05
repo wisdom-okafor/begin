@@ -9,6 +9,7 @@ func main() {
 		c := a[3:]     // slice from 4th element to end
 		d := a[:6]     // slicce first 6 elements
 		e := a[3:6]    // slice the 4th, 5th, and 6th elements
+		a[5] = 42
 		fmt.Println(a)
 		fmt.Println(b)
 		fmt.Println(c)
