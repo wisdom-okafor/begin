@@ -1,18 +1,8 @@
 package main
-
 import (
-	"fmt"
-)	
-func main() {
-        a := []int{}
-		fmt.Println(a)
-		fmt.Printf("Length: %v\n", len(a))
-		fmt.Printf("capacity: %v\n", cap(a))
-		a = append(a, 1)
-		fmt.Println(a)
-		fmt.Printf("Length: %v\n", len(a))
-		fmt.Printf("capacity: %v\n", cap (a))
-		fmt.Println(a)
-		fmt.Printf("Length: %v\n", len(a))
-		fmt.Printf("capacity: %v\n", cap(a))
+	"fmt" 
+)
+func main() { 
+	var n complex64 = 1 + 2i
+	fmt.Printf("%v, %T\n", n, n)	
 }
