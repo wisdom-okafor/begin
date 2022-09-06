@@ -19,5 +19,5 @@ func main() {
 	b.Origin = "Australia"
 	b.SpeedKPH = 48
 	b.CanFly = false
-	fmt.Println(b)
+	fmt.Println(b.Name)
 }	
