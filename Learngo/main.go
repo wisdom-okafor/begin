@@ -20,5 +20,5 @@ func main() {
 			"Sarah Jane Smith",
 		},
 	}
-	fmt.Println(aDoctor.actorName)
+	fmt.Println(aDoctor.companions)
 }	
