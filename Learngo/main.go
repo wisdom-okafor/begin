@@ -5,5 +5,8 @@ import (
 
 func main() { 
 	aDoctor:= struct{name string}{name: "John Pertwee"}
-	fmt.Println(aDoctor)	
+	anotherDoctor := aDoctor
+	anotherDoctor.name = "Tom Baker"
+	fmt.Println(aDoctor)
+	fmt.Println(anotherDoctor)	
 }	
