@@ -2,18 +2,23 @@ package main
 import (
 	"fmt" 
 )
+
+type Doctor struct {
+	number int
+	actorName string
+	companions []string
+}
+
 func main() { 
-	statepopulations := make(map[string]int)
-	statepopulations = map[string]int{
-		       "california":     39250017,
-			   "Texas":          27862596,
-			   "Florida":        20612439,
-			   "New york":       19745289,
-			   "Pennsylvania":   12802503,
-			   "Illinois":       12801539,
-			   "Ohio":           11614373,
-}
-fmt.Println(statepopulations)
-statepopulations["Georgia"] = 10310371
-fmt.Println(statepopulations)
-}
+	aDoctor:= Doctor{
+		number: 3,
+		actorName: "jon pertwee",
+		companions: []string {
+			"Liz shaw",
+			"Jo Grant",
+			
+			"Sarah Jane Smith",
+		},
+	}
+	fmt.Println(aDoctor)
+}	
