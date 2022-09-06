@@ -13,6 +13,7 @@ func main() {
 			   "Illinois":       12801539,
 			   "Ohio":           11614373,
 }
+fmt.Println(statepopulations)
 statepopulations["Georgia"] = 10310371
 fmt.Println(statepopulations)
 }
