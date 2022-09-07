@@ -4,7 +4,7 @@ import (
 )
 func main() {
 	number := 50
-	guess := 50
+	guess := 70
 	if guess < number {
 		fmt.Println("Too low")
 	}
