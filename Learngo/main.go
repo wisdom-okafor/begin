@@ -3,7 +3,7 @@ import (
 	"fmt"
 )
 func main() {
-	switch 2 {
+	switch 1 {
 		case 1:
 			fmt.Print("one")
 		case 2:
