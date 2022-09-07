@@ -3,13 +3,13 @@ import (
 	"fmt"
 )
 func main() {
-	switch 3 {
-		case 1:
-			fmt.Print("one")
-		case 2:
-			fmt.Println("two")
+	switch 5 {
+		case 1, 5, 10:
+			fmt.Print("one, five, ten")
+		case 2, 4, 6:
+			fmt.Println("two, four, six")
 		default:
-			fmt.Print("not one or two")
+			fmt.Print("another number")
 
 	
 		}
