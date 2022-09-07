@@ -1,18 +1,14 @@
 package main
 import (
 	"fmt"
+	"math"
 )
 func main() {
-	number := 50
-	guess := 70
-	if guess < number {
-		fmt.Println("Too low")
+	myNum := 0.1
+	if myNum == math.Pow(math.Sqrt(myNum), 2) {
+		fmt.Println("These are the same")
+
+	} else {
+		fmt.Println("Thes are different")
+		}
 	}
-	if guess > number {
-		fmt.Println("Too high")
-	}
-	if guess == number {
-		fmt.Println("You got it!")
-	}
-	fmt.Println(number<=guess, number >=guess, number!=guess)
-}
