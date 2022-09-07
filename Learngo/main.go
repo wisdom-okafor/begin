@@ -4,7 +4,7 @@ import (
 	"math"
 )
 func main() {
-	myNum := 0.1
+	myNum := 0.123
 	if myNum == math.Pow(math.Sqrt(myNum), 2) {
 		fmt.Println("These are the same")
 
