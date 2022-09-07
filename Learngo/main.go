@@ -1,15 +1,17 @@
 package main
 import (
 	"fmt"
-	"reflect" 
 )
-type Animal struct {
-	Name string `required max:"100"`
-	Origin string
-}
 func main() {
-	t := reflect.TypeOf(Animal{})
-	field, _ := t.FieldByName("Name")
-	fmt.Println(field.Tag)
+	number := 50
+	guess := 30
+	if guess < number {
+		fmt.Println("Too low")
+	}
+	if guess > number {
+		fmt.Println("Too high")
+	}
+	if guess == number {
+		fmt.Println("You got it!")
+	}
 }
-	
