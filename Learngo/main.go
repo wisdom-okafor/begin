@@ -14,4 +14,5 @@ func main() {
 	if guess == number {
 		fmt.Println("You got it!")
 	}
+	fmt.Println(number<=guess, number >=guess, number!=guess)
 }
