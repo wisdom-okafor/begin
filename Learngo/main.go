@@ -4,7 +4,7 @@ import (
 )
 func main() {
 	 fmt.Println("start")
-	 fmt.Println("middle")
+	 defer fmt.Println("middle")
 	 fmt.Println("end")
 	
 }
