@@ -4,10 +4,8 @@ import (
 )
 
 func main() {
-   a := 42
-   b := a
-   fmt.Println(a, b)
-   a = 27
+  var a int = 42
+   var b*int = &a
    fmt.Println(a, b)
 	
 }
