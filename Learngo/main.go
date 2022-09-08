@@ -12,7 +12,7 @@ func main() {
 	case string:
 		fmt.Println("i is a string")
 	case [3] int:
-		fmt.Println("i is [3]int")
+		fmt.Println("i is [2]int")
 	default:
 			fmt.Print("i is another type")
 		}
