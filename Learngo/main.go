@@ -3,14 +3,14 @@ import (
 	"fmt"
 )
 func main() {
-	i:= 10
-	switch {
-		case i <= 10:
-			fmt.Println("less than or equal to ten")
-			fallthrough
-		case i <= 20:
-			fmt.Println("less than or equal to twenty")
-		default:
-			fmt.Print("greater than twenty")
+	var i interface{} = "1"
+	switch i. (type) {
+	case int:
+			fmt.Println("i is an int")
+	case float64:
+			fmt.Println("i is a float64")
+	case string:
+	default:
+			fmt.Print("i is another type")
 		}
 	}
