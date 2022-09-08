@@ -4,9 +4,12 @@ import (
 )
 
 func main() {
-  a := [3]int{1, 2, 3}
-  b := &a[0]
-  c := &a[1]
-   fmt.Printf("%v %p %p\n", a, b, c)
+	for i := 0; i < 5; i++ {
+		sayMessage("Heloo Go!", i)
+	}
+}
+func sayMessage(msg string, idx int) {
+	fmt.Println(msg) 
+   fmt.Println("The value of the index is", idx)
 	
 }
