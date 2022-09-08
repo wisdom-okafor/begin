@@ -7,6 +7,7 @@ func main() {
 	switch {
 		case i <= 10:
 			fmt.Println("less than or equal to ten")
+			fallthrough
 		case i <= 20:
 			fmt.Println("less than or equal to twenty")
 		default:
