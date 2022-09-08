@@ -3,8 +3,8 @@ import (
 	"fmt"
 )
 func main() {
-	s := "hello Go!"
-	for k, v := range s {
-		fmt.Println(k,string(v))
-	}
+	 fmt.Println("start")
+	 fmt.Println("middle")
+	 fmt.Println("end")
+	
 }
