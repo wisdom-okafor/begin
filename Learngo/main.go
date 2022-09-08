@@ -5,6 +5,7 @@ import (
 
 func main() {
    a := 42
-   fmt.Println(a)
+   b := a
+   fmt.Println(a, b)
 	
 }
