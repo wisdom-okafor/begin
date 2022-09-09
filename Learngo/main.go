@@ -12,6 +12,8 @@ func main() {
 	go func(ch <-chan int) {
 		i := <-ch
 		 fmt.Println(i)
+		 i = <-ch
+		 fmt.Println(i)
 		wg.Done()
 	}(ch)
 	go func(ch chan<- int) {
