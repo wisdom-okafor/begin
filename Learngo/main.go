@@ -15,7 +15,9 @@ func main() {
 		wg.Done()
 	}()
 	go func () {
-		ch <- 42
+		i := 42
+		ch <- i
+		i = 27
 		wg.Done()
 	}()
 	wg.Wait()
