@@ -4,12 +4,10 @@ import (
 )
 
 func main() {
-	for i := 0; i < 5; i++ {
-		sayMessage("Heloo Go!", i)
-	}
+	d := divide(5.0, 3.0)
+	fmt.Println(d)
 }
-func sayMessage(msg string, idx int) {
-	fmt.Println(msg) 
-   fmt.Println("The value of the index is", idx)
+func divide(a, b float64) float64 {
+	return a / b
 	
 }
