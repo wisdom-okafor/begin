@@ -1,17 +1,15 @@
 package main
+
 import (
 	"fmt"
+	"time"
 )
-
 func main() {
-	var i interface{} = true
-	switch i.(type) {
-	case int:
-		fmt.Println("i is an integer")
-	case string:
-		fmt.Println("i is a string")
-	default:
-		fmt.Println("I don't know what i is")
-	}
+    var msg = "Hello"
+	go func() {
+		fmt.Println(msg)
+	}()
+	msg = "Goodbye"
+	time.Sleep(100 * time.Millisecond)
 }
-	
+
