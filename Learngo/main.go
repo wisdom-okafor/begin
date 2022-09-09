@@ -8,18 +8,16 @@ var wg = sync.WaitGroup{}
 
 func main() {
 	ch := make(chan int)
-	for j := 0; j < 5; j++ {
 	wg.Add(2)
-	go func () {
+	go func (ch <-chan int) {
 		i := <-ch
 		fmt.Println(i)
 		wg.Done()
 		
-	}()
-	go func() {
+	}(ch)
+	go func(ch chan<- int) {
 		ch <- 42
 		wg.Done()
-	}()
-}
+	}(ch)
 wg.Wait()
 }
