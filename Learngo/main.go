@@ -4,7 +4,7 @@ import (
 )
 
 func main() {
-	var i interface{} = 0
+	var i interface{} = "0"
 	switch i.(type) {
 	case int:
 		fmt.Println("i is an integer")
