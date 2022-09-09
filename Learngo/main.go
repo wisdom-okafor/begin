@@ -1,13 +1,21 @@
 package main
 import (
 	"fmt"
-)
-
-func main() {
-	d := divide(5.0, 3.0)
-	fmt.Println(d)
-}
-func divide(a, b float64) float64 {
-	return a / b
 	
-}
+)
+func main () {
+	g := greeter{
+		greeting: "Hello",
+		name: "Go",
+	}
+	g.greet()
+	fmt.Println("The new name is:", g.name)
+	}
+	type greeter struct {
+		greeting string
+		name string
+	}
+	func (g greeter) greet() {
+		fmt.Println(g.greeting, g.name)
+	}
+	
