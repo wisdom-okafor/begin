@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"reflect"
 	"strconv"
 
 	
@@ -11,8 +10,8 @@ import (
 var pl = fmt.Println
 
 func main() {
-	cV3 := "50000000"
-    cV4, err := strconv.Atoi(cV3)
-	  pl(cV4, err, reflect.TypeOf(cV4))
+	cV5 := 5000000
+    cV6 := strconv.Itoa(cV5)
+	  pl(cV6)
 	
 }
