@@ -2,16 +2,21 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 
-	
 )
 
 var pl = fmt.Println
 
 func main() {
-	cV5 := 5000000
-    cV6 := strconv.Itoa(cV5)
-	  pl(cV6)
+	iAge := 8
+	if (iAge >= 1) && (iAge <=18) {
+		pl("Important Birthday")
+	} else if (iAge == 21) || (iAge == 50) {
+		pl("Important Birthday")
+	} else if iAge >= 65 {
+		pl("Important Birthday")
+	} else {
+		pl("Not an Important Birthday")
+	}
 	
 }
