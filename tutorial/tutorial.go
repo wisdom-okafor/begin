@@ -18,5 +18,6 @@ func main() {
 	} else {
 		pl("Not an Important Birthday")
 	}
+	pl("!true =", !true)
 	
 }
