@@ -5,13 +5,14 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/beginner/restfulapi/crud/pkg/handlers"
+	"crud/pkg/handlers"
 )
 
 func main() {
 	router := mux.NewRouter()
 
-	router.HandleFunc("/books", handlers.GetAllBooks)
+	router.HandleFunc("/books", handlers.GetAllBooks).Methods(http.MethodGet)
+	router.HandleFunc("/books", handlers.AddBook).Methods(http.MethodPost)
 
 	log.Println("API is running!")
 	http.ListenAndServe(":4000", router)

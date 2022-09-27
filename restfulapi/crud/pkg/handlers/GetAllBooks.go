@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-    "github.com/beginner/restsfulapi/crud/pkg/mocks"
+    "crud/pkg/mocks"
 )
 
 func GetAllBooks(w http.ResponseWriter, r *http.Request) {

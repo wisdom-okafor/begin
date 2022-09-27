@@ -1,6 +1,6 @@
 package mocks
 
-import "github.com/beginner/restfulapi/crud/pkg/models"
+import "crud/pkg/models"
 
 var Books = []models.Book{
 	{
