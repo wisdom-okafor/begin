@@ -2,36 +2,24 @@ package main
 
 import (
     "fmt"
+    "time"
 )
 
 var pl = fmt.Println
 
-type Animal interface{
-    AngrySound()
-    HappySound()
-
+func printTo15() {
+    for i := 1; i <= 15; i++ {
+    pl("Fun 1 :", i)
+   }
 }
-type Cat string
-
-func (c Cat) Attack(){
-    pl("cat Attacks it's prey")
-
-}
-func (c Cat) Name() string{
-    return string(c)
-}
-func (c Cat) AngrySound(){
-}
-func (c Cat) HappySound() {
-    pl("cat says purrrrrr")
+func printTo10() {
+    for i := 1; i <= 10; i++ {
+        pl("Fun 2 :", i)
+    }
 }
 
 func main() {
-    var kitty Animal
-    kitty = Cat("kitty")
-    kitty.AngrySound()
-    var kitty2 Cat = kitty.(Cat)
-    kitty2.Attack()
-    pl("Cats Name :", kitty2.Name())
-
+    go printTo15()
+    go printTo10()
+    time.Sleep(2 * time.Second)
 }
