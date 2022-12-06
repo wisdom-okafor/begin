@@ -6,23 +6,32 @@ import (
 
 var pl = fmt.Println
 
+type Animal interface{
+    AngrySound()
+    HappySound()
+
+}
+type Cat string
+
+func (c Cat) Attack(){
+    pl("cat Attacks it's prey")
+
+}
+func (c Cat) Name() string{
+    return string(c)
+}
+func (c Cat) AngrySound(){
+}
+func (c Cat) HappySound() {
+    pl("cat says purrrrrr")
+}
+
 func main() {
-// %d : Integer
-// %s : String
-// %t : Boolean
-// %f : Float
-// %c : Character
-// %o : Base 8
-// %x : Base 16
-// %T : Type of supplied value
-// %v : Guesses based on data type
+    var kitty Animal
+    kitty = Cat("kitty")
+    kitty.AngrySound()
+    var kitty2 Cat = kitty.(Cat)
+    kitty2.Attack()
+    pl("Cats Name :", kitty2.Name())
 
-fmt.Printf("%s, %d, %t, %f, %c, %o, %x\n",
-"stuff", 12, true, 1.12, 'k', 1, 1)
-fmt.Printf("%9f\n", 3.14)
-fmt.Printf("%.2f\n", 3.141592)
-fmt.Printf("%.2f\n", 3.141592)
-
-sp1 := fmt.Sprintf("%9.f\n", 3.141592)
-pl(sp1)
 }
