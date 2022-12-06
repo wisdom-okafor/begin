@@ -1,61 +1,28 @@
-package main
+package main 
+
 import (
     "fmt"
-    "bytes"
 )
-func main () {
-    var wc WriterCloser = NewBufferedWriterCloser()
-    wc.Write([]byte("Hello YouTube listeners, this is a test"))
-    wc.Close()
-}
 
-type Writer interface {
-    Write([]byte) (int, error)
-}
+var pl = fmt.Println
 
-type Closer interface {
-    Close() error
-}
+func main() {
+// %d : Integer
+// %s : String
+// %t : Boolean
+// %f : Float
+// %c : Character
+// %o : Base 8
+// %x : Base 16
+// %T : Type of supplied value
+// %v : Guesses based on data type
 
-type WriterCloser interface {
-    Writer
-    Closer
-}
+fmt.Printf("%s, %d, %t, %f, %c, %o, %x\n",
+"stuff", 12, true, 1.12, 'k', 1, 1)
+fmt.Printf("%9f\n", 3.14)
+fmt.Printf("%.2f\n", 3.141592)
+fmt.Printf("%.2f\n", 3.141592)
 
-    type BufferedWriterCloser struct {
-        buffer *bytes.Buffer
-    }
-    func (bwc *BufferedWriterCloser) Write(data []byte) (int, error) {
-        n, err := bwc.buffer.Write(data)
-        if err != nil {
-            return 0, err
-        }
-        v := make ([]byte, 8)
-        for bwc.buffer.Len() > 8 {
-            _, err := bwc.buffer.Read(v)
-            if err != nil {
-            return 0, err
-        }
-        _, err = fmt.Println(string(v))
-        if err != nil {
-    return 0, err
-        }
-    }
-    return n, nil
-}
-func (bwc *BufferedWriterCloser) Close() error {
-    for bwc.buffer.Len() > 0 {
-        data := bwc.buffer.Next(8)
-        _, err := fmt.Println(string(data))
-        if err != nil {
-            return err
-        }
-    }
-    return nil
-}
-
-func NewBufferedWriterCloser() *BufferedWriterCloser {
-        return &BufferedWriterCloser{
-            buffer: bytes.NewBuffer([]byte{}),
-        }
+sp1 := fmt.Sprintf("%9.f\n", 3.141592)
+pl(sp1)
 }
