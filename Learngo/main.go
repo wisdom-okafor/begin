@@ -1,40 +1,37 @@
-package main 
+package main
 
 import (
     "fmt"
-    "sync"
-    "time"
 )
 
 var pl = fmt.Println
 
-type Account struct {
-    balance int 
-    lock   sync.Mutex
+type contact struct {
+    fName string
+    lName string
+    phone string
 }
-func (a *Account) GetBalance() int {
-    a.lock.Lock()
-    defer a.lock.Unlock()
-    return a.balance 
+type business struct {
+    name    string
+    address  string
+    contact 
 }
-func (a *Account) Withdraw(v int){
-    a.lock.Lock()
-    defer a.lock.Unlock()
-    if v > a.balance {
-        pl("Not enough money in account")
-    } else {
-        fmt.Printf("%d withdrawn : Balance : %d\n",
-        v, a.balance)
-        a.balance -= v
-    }
+
+func (b business) info() {
+    fmt.Printf("Contact at %s is %s %s", b.name, b.contact.fName, b.contact.lName)
 }
 
 func main() {
-    var acct Account
-    acct.balance = 100
-    pl("Balance :", acct.GetBalance())
-    for i := 0; i < 12; i++ {
-        go acct.Withdraw(10)
+    con1 := contact{
+        "James",
+        "Wang",
+        "555-1212",
     }
-    time.Sleep(2 * time.Second)
+    bus1 := business{
+        "ABC Plumbing",
+        "234 North St",
+        con1,
+    }
+    bus1.info()
+
 }
